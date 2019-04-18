@@ -1,0 +1,81 @@
+#include <iostream>
+#include <conio.h> 
+#include <string>
+
+using namespace std;
+
+char unidades(string q){
+    int a=stoi(q);
+    if(a>=1 && a<=3)
+    {
+        a = char(a);
+        a = 'X';
+    }
+    else if(a>=4 && a<=6)
+    {
+        a = char(a);
+        a = 'Y';
+    }
+    else if(a>=7 && a<=9)
+    {
+        a = char(a);
+        a = 'Z';
+    }
+    else a='#';
+    return a;
+}
+char decenas(string o)
+{
+    int b=stoi(o);
+    if(b>=1 && b<=3)
+    {
+        b = char(b);
+        b = 'T';
+    }
+    else if(b>=4 && b<=6)
+    {
+        b = char(b);
+        b = 'W';
+    }
+    else if(b>=7 && b<=9)
+    {
+        b = char(b);
+        b = 'P';
+    }
+    else b='&';
+    return b;
+}
+char centenas(string i)
+{
+    int c=stoi(i);
+     if(c>=1 && c<=3)
+    {
+        c = char(c);
+        c = 'Q';
+    }
+    else if(c>=4 && c<=6)
+    {
+        c = char(c);
+        c = 'W';
+    }
+    else if(c>=7 && c<=9)
+    {
+        c = char(c);
+        c = 'M';
+    }
+    else c='@';
+    return c;
+}
+
+int main(){
+   string num,uni,dece,cent;
+   cout<<"Porfavor ingrese su codigo ";
+   cin>>num;
+   uni = num.substr(2,1);
+   dece = num.substr(1,1);
+   cent = num.substr(0,1);
+   
+   cout<<"El codigo encriptado es : "<<unidades(uni)<<decenas(dece)<<centenas(cent)<<endl;
+    _getch();
+    return 0;
+}
