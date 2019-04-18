@@ -1,0 +1,82 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+	char f, t, d;
+
+	cout << "fabricante: ";
+	cin >> f;
+	cout << "tipo: ";
+	cin >> t;
+	
+	f = toupper(f);
+	t = toupper(t);
+
+	switch(f){
+	case 'M':if (t == 'S') {
+		cout << "precio: 1500" << endl;
+	}
+			 else if (t == 'L') {
+				 cout << "dispositivo: ";
+				 cin >> d;
+				 d = toupper(d);
+				 if (d == 'C') {
+					 cout << "precio 1800" << endl;
+				 }
+				 else if (d == 'T') {
+					 cout << "precio : 1200" << endl;
+				 }
+				 else if (d == 'O') {
+					 cout << "precio : 900" << endl;
+				 }
+				 else cout << "ERROR" << endl;
+	}
+		break;
+	case 'A':if (t == 'S') {
+		cout << "precio: 2500" << endl;
+	}
+	else if (t == 'L') {
+		cout << "dispositivo: ";
+		cin >> d;
+		d = toupper(d);
+		if (d == 'C') {
+			cout << "precio 1900" << endl;
+		}
+		else if (d == 'T') {
+			cout << "precio : 1800" << endl;
+		}
+		else if (d == 'O') {
+			cout << "precio : 1600" << endl;
+		}
+		else cout << "ERROR" << endl;
+	};
+
+		break;
+	case 'L': if (t == 'S') {
+		cout << "precio: 1000" << endl;
+	}
+			  else if (t == 'L') {
+				  cout << "dispositivo: ";
+				  cin >> d;
+				  d = toupper(d);
+				  if (d == 'C') {
+					  cout << "precio 100" << endl;
+				  }
+				  else if (d == 'T') {
+					  cout << "precio : 150" << endl;
+				  }
+				  else if (d == 'O') {
+					  cout << "precio : 50" << endl;
+				  }
+				  else cout << "ERROR" << endl;
+			  }
+		break;
+	default:
+		cout << "Porfavor ingrese un valor valido" << endl;
+		break;
+	}
+
+	system("pause");
+		return 0;
+}
+
