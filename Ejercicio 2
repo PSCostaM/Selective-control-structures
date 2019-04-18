@@ -1,0 +1,54 @@
+#include <iostream>
+#include <conio.h> 
+
+using namespace std;
+
+int main(){
+    int sFijo=2500, edad;
+    char nacio;
+    cout<<"Indique su edad : ";
+    cin>>edad;
+    cout<<"Porfavor indique su nacionalidad(E:extranjero, N:Nacional) : ";
+    cin>>nacio;
+    nacio = toupper(nacio);
+    
+        switch(nacio)
+        {
+            case 'E':
+            sFijo +=800;
+             if(edad>=15 || edad<=21)
+             {
+                 sFijo+=1400;
+             }
+             else if(edad>=21 || edad<=25)
+             {
+                 sFijo+=1500;
+             }
+             else if(edad>=25 || edad<=30)
+             {
+                 sFijo+=1200;
+             }
+             else sFijo += 800;
+            
+            break;
+        case 'N':
+        if(edad>=15 || edad<=21)
+             {
+                 sFijo+=1400;
+             }
+             else if(edad>=21 || edad<=25)
+             {
+                 sFijo+=1500;
+             }
+             else if(edad>=25 || edad<=30)
+             {
+                 sFijo+=1200;
+             }
+             else sFijo += 800;
+        break;
+        }
+        cout<<"Su sueldo es : "<<sFijo<<endl;
+    
+    _getch();
+    return 0;
+}
