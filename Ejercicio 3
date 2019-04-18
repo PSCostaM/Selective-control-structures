@@ -1,0 +1,78 @@
+#include <iostream>
+#include <conio.h> 
+
+using namespace std;
+
+
+int main(){
+    char t,celu;
+    
+   int unidad;
+    cout<<"Ingrese el tipo de producto : ";cin>>t;
+    t = toupper(t);
+    cout<<"Ingrese el tipo de celular : ";cin>>celu;
+    celu = toupper(celu);
+    
+    switch(t)
+    {
+        
+        case 'O':
+        if(celu=='I')
+        {
+        cout<<"El precio por unidad será de S/50.60 por unidad "<<endl;
+        cout<<"Cuantos equipos desea : ";cin>>unidad;
+        double precioTotal = unidad*(50.60);
+        cout<<"El precio es S/"<<precioTotal<< " soles"<<endl;
+        }
+        else if (celu=='A'){ 
+        cout<<"El precio por unidad será de S/20.30 por unidad "<<endl;
+        cout<<"Cuantos equipos desea : ";cin>>unidad;
+        double precioTotal = unidad*(20.30);
+        cout<<"El precio es S/"<<precioTotal<< " soles"<<endl;
+        }
+        else cout<<"Porfavor ingrese una opcion valida."<<endl;
+        break;
+
+        case'J':
+        if(celu=='I')
+        {
+        cout<<"El precio por unidad será de S/90.80 por unidad "<<endl;
+        cout<<"Cuantos equipos desea : ";cin>>unidad;
+        double precioTotal = unidad*(90.80);
+        cout<<"El precio es S/"<<precioTotal<< " soles"<<endl;
+        }
+        else if (celu=='A'){ 
+        cout<<"El precio por unidad será de S/40.50 por unidad "<<endl;
+        cout<<"Cuantos equipos desea : ";cin>>unidad;
+        double precioTotal = unidad*(40.50);
+        cout<<"El precio es S/"<<precioTotal<< " soles"<<endl;
+        }
+        else cout<<"Porfavor ingrese una opcion valida."<<endl;
+        break;
+        
+        case 'U':
+        if(celu=='I')
+        {
+        cout<<"El precio por unidad será de S/60.50 por unidad "<<endl;
+        cout<<"Cuantos equipos desea : ";cin>>unidad;
+        double precioTotal = unidad*(60.50);
+        cout<<"El precio es S/"<<precioTotal<< " soles"<<endl;
+        }
+        else if (celu=='A'){ 
+        cout<<"El precio por unidad será de S/30.60 por unidad "<<endl;
+        cout<<"Cuantos equipos desea : ";cin>>unidad;
+        double precioTotal = unidad*(30.60);
+        cout<<"El precio es S/"<<precioTotal<< " soles"<<endl;
+        }
+        else cout<<"Porfavor ingrese una opcion valida."<<endl;
+        break;
+        
+        default:
+        cout<<"Porfavor ingrese un tipo de producto valido"<<endl;
+        break;
+    }
+    
+    
+    _getch();
+    return 0;
+}
